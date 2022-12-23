@@ -19,6 +19,7 @@ else:
         token = data["token"]
         prefix = data["prefix"]
         application_id = data["application_id"]
+        guild_id = data["guild_id"]
 
 intents = discord.Intents.all()
 
@@ -36,7 +37,7 @@ async def main():
         await load_extensions()
         await bot.start(token)
     
-@tree.context_menu(name = "Sync", guild=discord.Object(id=906955711358054440))
+@tree.context_menu(name = "Sync", guild=discord.Object(guild_id))
 async def sync(interaction: discord.Interaction, message: discord.Message):
         ctx = await bot.get_context(interaction)
         fmt = await ctx.bot.tree.sync(guild=interaction.guild)
