@@ -1,0 +1,15 @@
+*.mp3
+*.mp4
+*.avi
+*.flv
+*.mkv
+*.mov
+*.mpg
+*.mpeg
+*.wmv
+*.m4a
+*.webm
+
+config.py
+configuration.json
+**/__pycache__
